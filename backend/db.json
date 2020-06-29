@@ -1,0 +1,19 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Caneta BIC Preta",
+            "price": 5.89
+        },
+        {
+            "id": 2,
+            "name": "MacMagazine",
+            "price": 9.50
+        },
+        {
+            "id": 3,
+            "name": "Monitor UltraWiode",
+            "price": 1299.00
+        }
+    ]
+}
