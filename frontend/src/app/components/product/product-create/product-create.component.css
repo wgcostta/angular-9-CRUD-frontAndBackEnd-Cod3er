@@ -2,3 +2,9 @@ form {
     display: flex;
     flex-direction: column;
 }
+
+button{
+    margin: 20px 15px 0px 0px;
+/**    margin-right: 15px;
+    margin-top: 20 px;**/
+}
