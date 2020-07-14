@@ -1,0 +1,9 @@
+form {
+  display: flex;
+  flex-direction: column;
+  /*Cada elemento na sua própria coluna*/
+}
+
+button {
+  margin: 20px 15px 0px 0px;
+}

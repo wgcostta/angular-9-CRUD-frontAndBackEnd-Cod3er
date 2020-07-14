@@ -1,24 +1,23 @@
-import { Product } from './product.model';
-import { Injectable } from '@angular/core';
-import { MatSnackBar } from '@angular/material/snack-bar';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Product } from "./product.model";
+import { Injectable } from "@angular/core";
+import { MatSnackBar } from "@angular/material/snack-bar";
+import { HttpClient } from "@angular/common/http";
+import { Observable } from "rxjs";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class ProductService {
   baseUrl = "http://localhost:3001/products";
 
-  constructor(private snackBar: MatSnackBar,
-    private http: HttpClient) { }
+  constructor(private snackBar: MatSnackBar, private http: HttpClient) {}
 
   showMessage(msg: string): void {
-    this.snackBar.open(msg, 'X', {
+    this.snackBar.open(msg, "X", {
       duration: 3000,
       horizontalPosition: "right",
-      verticalPosition: "top"
-    })
+      verticalPosition: "top",
+    });
   }
 
   create(product: Product): Observable<Product> {
@@ -30,18 +29,17 @@ export class ProductService {
   }
 
   readById(id: String): Observable<Product> {
-    const url = `${this.baseUrl}/${id}`
-    return this.http.get<Product>(url)
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.get<Product>(url);
   }
 
   update(product: Product): Observable<Product> {
-    const url = `${this.baseUrl}/${product.id}`
-    return this.http.put<Product>(url, product)
+    const url = `${this.baseUrl}/${product.id}`;
+    return this.http.put<Product>(url, product);
   }
 
-  delete(id: String): Observable<Product> {
-    const url = `${this.baseUrl}/${id}`
-    return this.http.delete<Product>(url)
+  delete(id: number): Observable<Product> {
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.delete<Product>(url);
   }
-
 }
