@@ -1,11 +1,6 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Caneta BIC Preta Preta Preta",
-      "price": 5.89
-    },
-    {
       "id": 2,
       "name": "MacMagazine",
       "price": 9.5
