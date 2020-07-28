@@ -48,7 +48,10 @@ export class ProductService {
   update(product: Product): Observable<Product> {
     const url = `${this.baseUrl}/${product._id}`;
     console.log(product);
-    return this.http.put<Product>(url, product);
+    return this.http.put<Product>(url, product).pipe(
+      map((obj) => obj),
+      catchError((e) => this.errorHandler(e))
+    );
   }
 
   delete(id: string): Observable<Product> {
