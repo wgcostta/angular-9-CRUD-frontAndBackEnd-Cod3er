@@ -9,7 +9,7 @@ import { Observable, EMPTY } from "rxjs";
   providedIn: "root",
 })
 export class ProductService {
-  baseUrl = "http://localhost:3000/products";
+  baseUrl = "https://nodeherokucloud.herokuapp.com/products";
   //http://localhost:3000/products
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) {}
