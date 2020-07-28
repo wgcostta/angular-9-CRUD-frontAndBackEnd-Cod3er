@@ -18,7 +18,7 @@ export class ProductUpdateComponent implements OnInit {
   ) {}
   //private route: ActivatedRoute pegar o párametro que vem pela rota atual
   ngOnInit(): void {
-    const id = +this.route.snapshot.paramMap.get("id");
+    const id = this.route.snapshot.paramMap.get("id");
     this.productService.readById(id).subscribe((product) => {
       this.product = product;
     });
@@ -26,7 +26,7 @@ export class ProductUpdateComponent implements OnInit {
 
   updateProduct(): void {
     this.productService.update(this.product).subscribe((product) => {
-      this.productService.showMessage("Producto atualizado com sucesso!");
+      this.productService.showMessage("Produto atualizado com sucesso!");
       this.router.navigate(["/products"]);
     });
   }

@@ -5,6 +5,7 @@
       <input
         matInput
         placeholder="Nome"
+        *ngIf="product.name"
         [(ngModel)]="product.name"
         name="name"
       />

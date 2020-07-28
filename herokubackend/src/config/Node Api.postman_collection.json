@@ -1,0 +1,196 @@
+{
+	"info": {
+		"_postman_id": "485c8db2-b09b-4dec-b654-ab776d32c9d9",
+		"name": "Node Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Projects",
+			"item": [
+				{
+					"name": "Create Project",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmMWMzOTBlNWQwOGZhMjJkODllYTBlMSIsImlhdCI6MTU5NTcwOTkxNywiZXhwIjoxNTk1Nzk2MzE3fQ.bq9ZqjLLyALRGXcwyB4eP4GP53lWy3NlqOIer254JeE"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"title\": \"Novo Projeto\",\r\n\t\"descricao\": \"Descricao do Projeto\",\r\n\t\"tasks\":[\r\n\t\t{\r\n\t\t\t\"title\":\"Nova tarefa\",\r\n\t\t\t\"assignedTo\": \"5f1c390e5d08fa22d89ea0e1\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"title\":\"Outra tarefa\",\r\n\t\t\t\"assignedTo\": \"5f1c390e5d08fa22d89ea0e1\"\r\n\t\t}\r\n\t]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/projects",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmMWMzOTBlNWQwOGZhMjJkODllYTBlMSIsImlhdCI6MTU5NTcwOTkxNywiZXhwIjoxNTk1Nzk2MzE3fQ.bq9ZqjLLyALRGXcwyB4eP4GP53lWy3NlqOIer254JeE"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"title\": \"Novo Projeto\",\r\n\t\"descricao\": \"Descricao do Projeto\",\r\n\t\"tasks\":[\r\n\t\t{\r\n\t\t\t\"title\":\"Nova tarefa\",\r\n\t\t\t\"assignedTo\": \"5f1c390e5d08fa22d89ea0e1\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"title\":\"Outra tarefa\",\r\n\t\t\t\"assignedTo\": \"5f1c390e5d08fa22d89ea0e1\"\r\n\t\t}\r\n\t]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/projects",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmMWMzOTBlNWQwOGZhMjJkODllYTBlMSIsImlhdCI6MTU5NTcwOTkxNywiZXhwIjoxNTk1Nzk2MzE3fQ.bq9ZqjLLyALRGXcwyB4eP4GP53lWy3NlqOIer254JeE"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/projects",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Project",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmMWMzOTBlNWQwOGZhMjJkODllYTBlMSIsImlhdCI6MTU5NTcwOTkxNywiZXhwIjoxNTk1Nzk2MzE3fQ.bq9ZqjLLyALRGXcwyB4eP4GP53lWy3NlqOIer254JeE"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/projects/5f1d409c4902e638d4be5a55",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"projects",
+								"5f1d409c4902e638d4be5a55"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmMWMzOTBlNWQwOGZhMjJkODllYTBlMSIsImlhdCI6MTU5NTcwOTkxNywiZXhwIjoxNTk1Nzk2MzE3fQ.bq9ZqjLLyALRGXcwyB4eP4GP53lWy3NlqOIer254JeE"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/projects/5f1d3d1f60419e1c389995c8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"projects",
+								"5f1d3d1f60419e1c389995c8"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Forgout Password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmMWMzOTBlNWQwOGZhMjJkODllYTBlMSIsImlhdCI6MTU5NTcwOTkxNywiZXhwIjoxNTk1Nzk2MzE3fQ.bq9ZqjLLyALRGXcwyB4eP4GP53lWy3NlqOIer254JeE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"email\": \"wagner4@cloud99.net\",\r\n\t\"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/forgot_password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"forgot_password"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
