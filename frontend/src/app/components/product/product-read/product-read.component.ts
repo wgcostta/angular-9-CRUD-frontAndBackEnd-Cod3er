@@ -11,6 +11,7 @@ export class ProductReadComponent implements OnInit {
 
   products: Product[];
   displayedColumns = ['id', 'name', 'price', 'action'];
+  carregando : boolean = false;
 
   constructor(private productService: ProductService) { }
 
@@ -18,6 +19,7 @@ export class ProductReadComponent implements OnInit {
     this.productService.read().subscribe(products => {
       this.products = products;
       console.log(products);
+      this.carregando = true;
     })
   }
 

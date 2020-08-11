@@ -1,5 +1,7 @@
 <div class="mat-elevation-z4">
-  <table mat-table [dataSource]="products">
+  <mat-progress-bar *ngIf="!carregando" mode="indeterminate"></mat-progress-bar>
+  <table *ngIf="carregando" mat-table [dataSource]="products">
+    
     <!-- Id Column -->
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef>Código</th>
