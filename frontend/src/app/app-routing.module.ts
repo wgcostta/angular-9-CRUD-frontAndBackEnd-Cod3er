@@ -6,6 +6,7 @@ import { Routes, RouterModule } from "@angular/router";
 
 import { HomeComponent } from "./views/home/home.component";
 import { ProductCrudComponent } from "./views/product-crud/product-crud.component";
+import { AppCarouselComponent } from "./views/corousel/app-carousel.component";
 
 const routes: Routes = [
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: "products/delete/:id",
     component: ProductDeleteComponent,
+  },
+  {
+    path: "certificados",
+    component: AppCarouselComponent,
   },
 ];
 

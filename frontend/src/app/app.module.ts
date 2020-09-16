@@ -35,6 +35,7 @@ import { registerLocaleData } from '@angular/common';
 import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { AppCarouselComponent } from './views/corousel/app-carousel.component';
 
 registerLocaleData(localePt);
 
@@ -53,7 +54,8 @@ registerLocaleData(localePt);
     ProductReadComponent,
     ProductReadTempTabelaComponent,
     ProductUpdateComponent,
-    ProductDeleteComponent
+    ProductDeleteComponent,
+    AppCarouselComponent
   ],
   imports: [
     HttpClientModule,
