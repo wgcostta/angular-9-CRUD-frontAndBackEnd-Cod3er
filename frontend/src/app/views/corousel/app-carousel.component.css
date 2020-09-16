@@ -74,7 +74,7 @@ body {
 }
 
 .full-banner {
-    background-image: url('assets/images/full-banner.jpg');
+    background-image: url('/src/assets/images/full-banner.jpg');
     min-height: 120px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -267,7 +267,7 @@ footer {
     }
     .navbar.bg-dark {
         background-color: transparent!important;
-        background-image: url('assets/images/header_gradient.png');
+        background-image: url('/src/assets/images/header_gradient.png');
         background-repeat: repeat-x;
     }
     .full-banner {
