@@ -9,7 +9,6 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-
 .red {
   color: #e35e6b;
 }
@@ -32,7 +31,15 @@ body {
   color: #fff;
 }
 
+
 /*
+
+angular.json
+
+                "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+
+package-json              
+    "bootstrap": "^4.5.2",
 body {
     background-color: #1B1B1B!important;
     padding-top: 60px;
