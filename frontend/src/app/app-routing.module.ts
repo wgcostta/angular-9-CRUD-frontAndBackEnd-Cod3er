@@ -36,7 +36,7 @@ const routes: Routes = [
     component: AppCarouselComponent,
   },
   {
-    path: "login",
+    path: "access",
     component: LoginFormComponent,
   },
 ];
