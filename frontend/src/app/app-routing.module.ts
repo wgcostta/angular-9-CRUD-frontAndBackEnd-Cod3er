@@ -8,6 +8,8 @@ import { HomeComponent } from "./views/home/home.component";
 import { ProductCrudComponent } from "./views/product-crud/product-crud.component";
 import { AppCarouselComponent } from "./views/corousel/app-carousel.component";
 
+import { LoginFormComponent } from "./components/seguranca/login-form/login-form.component"
+
 const routes: Routes = [
   {
     path: "",
@@ -32,6 +34,10 @@ const routes: Routes = [
   {
     path: "certificados",
     component: AppCarouselComponent,
+  },
+  {
+    path: "login",
+    component: LoginFormComponent,
   },
 ];
 
