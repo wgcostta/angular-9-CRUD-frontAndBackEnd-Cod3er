@@ -9,11 +9,16 @@ import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-
+import { MatCarouselModule } from '@ngmodule/material-carousel';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import localePt from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,16 +32,12 @@ import { ForDirective } from './directives/for.directive';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 import { ProductReadComponent } from './components/product/product-read/product-read.component';
 import { ProductReadTempTabelaComponent } from './components/product/product-read-temp-tabela/product-read-temp-tabela.component';
-import { MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatSortModule } from '@angular/material/sort';
-import localePt from '@angular/common/locales/pt';
-import { registerLocaleData } from '@angular/common';
+
 import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
-import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { AppCarouselComponent } from './views/corousel/app-carousel.component';
-import { MatCarouselModule } from '@ngmodule/material-carousel';
+import { AppLoginComponent } from './components/seguranca/app-login/app-login.component';
+
 
 
 registerLocaleData(localePt);
@@ -49,6 +50,7 @@ registerLocaleData(localePt);
     FooterComponent,
     NavComponent,
     HomeComponent,
+
     ProductCrudComponent,
     RedDirective,
     ForDirective,
@@ -57,7 +59,9 @@ registerLocaleData(localePt);
     ProductReadTempTabelaComponent,
     ProductUpdateComponent,
     ProductDeleteComponent,
-    AppCarouselComponent
+    AppCarouselComponent,
+    AppLoginComponent
+    
 
   ],
   imports: [

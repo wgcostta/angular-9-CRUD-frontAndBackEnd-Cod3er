@@ -6,9 +6,10 @@ import { Routes, RouterModule } from "@angular/router";
 
 import { HomeComponent } from "./views/home/home.component";
 import { ProductCrudComponent } from "./views/product-crud/product-crud.component";
+import { AppLoginComponent } from "./components/seguranca/app-login/app-login.component";
+
 import { AppCarouselComponent } from "./views/corousel/app-carousel.component";
 
-import { LoginFormComponent } from "./components/seguranca/login-form/login-form.component"
 
 const routes: Routes = [
   {
@@ -32,13 +33,14 @@ const routes: Routes = [
     component: ProductDeleteComponent,
   },
   {
+    path: "loginn",
+    component: AppLoginComponent,
+  },
+  {
     path: "certificados",
     component: AppCarouselComponent,
   },
-  {
-    path: "access",
-    component: LoginFormComponent,
-  },
+
 ];
 
 @NgModule({
