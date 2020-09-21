@@ -1,22 +1,20 @@
 <div class="container" style="max-width: 400px; margin: auto">
     <form autocomplete="off">
-
+        <mat-card-title class="title">OAuth2</mat-card-title>
         <div class="ui-g ui-fluid">
+            <div class="ui-g-12">
+                <po-input type="email" name="usuario" p-label="E-mail" ngModel required #usuario>
+                </po-input>
 
-            <div class="ui-g-12">''
-                <h1>Login</h1>
             </div>
 
             <div class="ui-g-12">
-                <input pInputText type="email" name="usuario" placeholder="E-mail" ngModel required #usuario>
+                <po-input type="password" name="senha" p-label="Senha" ngModel required #senha>
+                </po-input>
             </div>
 
             <div class="ui-g-12">
-                <input po-InputText type="password" name="senha" placeholder="Senha" ngModel required #senha>
-            </div>
-
-            <div class="ui-g-12">
-                <button po-Button type="submit" label="Login"></button>
+                <po-button type="submit" p-label="Login" (p-click)="login(usuario.value, senha.value)"></po-button>
             </div>
 
         </div>

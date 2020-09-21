@@ -1,4 +1,3 @@
-//import { Http, Headers } from '@angular/http';
 import { HttpClient, HttpHeaders
 } from "@angular/common/http";
 import { Injectable } from '@angular/core';
@@ -8,14 +7,14 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class AuthService {
 
-  oauthTokenUrl = 'http://localhost:8080/oauth/token';
+  oauthTokenUrl = 'https://priceapi-live.herokuapp.com/oauth/token';
 
   constructor(private http: HttpClient) { }
 
   login(usuario: string, senha: string): Promise<void> {
     const headers = new HttpHeaders();
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
-    headers.append('Authorization', 'Basic YW5ndWxhcjpAbmd1bEByMA==');
+    headers.append('Authorization','Basic ZGVmYXVsdDphYmMxMjM=');
 
     const body = `username=${usuario}&password=${senha}&grant_type=password`;
 

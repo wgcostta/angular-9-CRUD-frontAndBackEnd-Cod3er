@@ -19,6 +19,9 @@ import { MatSortModule } from '@angular/material/sort';
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { PoFieldModule } from '@po-ui/ng-components';
+import { PoButtonModule } from '@po-ui/ng-components';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -37,7 +40,7 @@ import { ProductUpdateComponent } from './components/product/product-update/prod
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
 import { AppCarouselComponent } from './views/corousel/app-carousel.component';
 import { AppLoginComponent } from './components/seguranca/app-login/app-login.component';
-
+import { AuthService } from './components/seguranca/auth.service';
 
 
 registerLocaleData(localePt);
@@ -82,10 +85,13 @@ registerLocaleData(localePt);
     MatPaginatorModule,
     MatSortModule,
     MatProgressBarModule,
-    MatCarouselModule
-    
+    MatCarouselModule,
+    PoFieldModule,
+    PoButtonModule
   ],
-  providers: [{
+  providers: [
+    AuthService,
+    {
     provide: LOCALE_ID,
     useValue: 'pt-BR'
   }],
