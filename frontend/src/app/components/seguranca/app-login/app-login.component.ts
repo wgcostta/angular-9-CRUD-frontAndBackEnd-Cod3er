@@ -9,10 +9,10 @@ import { HeaderService } from "../../template/header/header.service";
   styleUrls: ['./app-login.component.css']
 })
 export class AppLoginComponent implements OnInit {
+    user: '';
+    password: '';
 
-  
-
-  constructor(
+   constructor(
     private auth: AuthService,
     private router: Router, 
     private headerService: HeaderService) {
@@ -23,8 +23,8 @@ export class AppLoginComponent implements OnInit {
     };
   }
 
-  login(usuario: string, senha: string) {
-    this.auth.login(usuario, senha);
+  login() {
+    this.auth.login(this.user, this.password);
   }
 
   ngOnInit(): void {
