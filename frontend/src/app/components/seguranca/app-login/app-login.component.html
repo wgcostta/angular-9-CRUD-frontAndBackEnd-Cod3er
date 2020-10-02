@@ -3,18 +3,18 @@
         <mat-card-title class="title">OAuth2</mat-card-title>
         <div class="ui-g ui-fluid">
             <div class="ui-g-12">
-                <po-input type="email" name="usuario" p-label="E-mail" ngModel required #usuario>
+                <po-input type="email" name="user" p-label="E-mail" [(ngModel)]="user">
                 </po-input>
 
             </div>
 
             <div class="ui-g-12">
-                <po-input type="password" name="senha" p-label="Senha" ngModel required #senha>
+                <po-input type="password" name="password" p-label="Senha" [(ngModel)]="password">
                 </po-input>
             </div>
 
             <div class="ui-g-12">
-                <po-button type="submit" p-label="Login" (p-click)="login(usuario, senha)"></po-button>
+                <po-button type="submit" p-label="Login" (p-click)="login()"></po-button>
             </div>
 
         </div>
