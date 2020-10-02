@@ -42,7 +42,6 @@ import { AppCarouselComponent } from './views/corousel/app-carousel.component';
 import { AppLoginComponent } from './components/seguranca/app-login/app-login.component';
 import { AuthService } from './components/seguranca/auth.service';
 
-
 registerLocaleData(localePt);
 
 @NgModule({
